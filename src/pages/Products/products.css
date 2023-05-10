@@ -1,0 +1,39 @@
+.products {
+  padding: 30px 50px;
+  display: flex;
+}
+
+.products .left {
+  flex: 1;
+  position: sticky;
+  height: 100%;
+  top: 50px;
+}
+
+.products .left .filterItem {
+  margin-bottom: 30px;
+}
+
+.products .left .filterItem h2 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.products .left .filterItem .inputItem {
+  margin-bottom: 10px;
+}
+
+.products .left .filterItem .inputItem label {
+  margin-left: 10px;
+}
+
+.products .right {
+  flex: 3;
+}
+
+.products .right .catImg {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  margin-bottom: 50px;
+}

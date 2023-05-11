@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/clienttomtailor/static/css/main.129dd706.css",
+    "main.js": "/clienttomtailor/static/js/main.1272b6e4.js",
+    "index.html": "/clienttomtailor/index.html",
+    "main.129dd706.css.map": "/clienttomtailor/static/css/main.129dd706.css.map",
+    "main.1272b6e4.js.map": "/clienttomtailor/static/js/main.1272b6e4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.129dd706.css",
+    "static/js/main.1272b6e4.js"
+  ]
+}

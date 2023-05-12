@@ -42,7 +42,7 @@ const Cart = () => {
 
       {products.map((item) => (
         <div className="item" key={item.id}>
-          <img src={process.env.REACT_APP_UPLOAD_URL + item.img} alt="image" />
+          <img src={item.img} alt="image" />
           <div className="details">
             <h1>{item.title}</h1>
             <p>{item?.description.substring(0, 100)}</p>

@@ -39,6 +39,16 @@
       font-weight: 500;
       font-size: 12px;
     }
+
+    .favourites {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      z-index: 3;
+      &:hover {
+        color: rgb(224, 97, 97);
+      }
+    }
   }
 
   h2 {

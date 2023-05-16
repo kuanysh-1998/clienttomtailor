@@ -16,7 +16,6 @@ const Product = () => {
   console.log(id);
 
   const { data, loading, error } = useFetch(`/products/${id}?populate=*`);
-  console.log(data)
 
   React.useEffect(() => {
     window.scrollTo(0, 0);

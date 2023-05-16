@@ -10,6 +10,8 @@ const Cart = () => {
   const dispatch = useDispatch();
   const { products } = useSelector((state) => state.cartSlice);
 
+  console.log(products)
+
   const totalSum = () => {
     let total = 0;
     products.forEach((item) => {

@@ -7,17 +7,32 @@
 }
 
 .contact .wrapper {
-  width: 50%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.contact .wrapper input {
-  padding: 10px;
-  border: none;
+.contact .wrapper .gmail {
+  display: flex;
+  cursor: pointer;
+}
+
+.contact .wrapper .mail {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding: 5px;
   border-radius: 5px 0 0  5px;
-  outline: none;
+  height: 40px;
+}
+
+.contact .wrapper .mail img {
+  width: 40px;
+}
+
+.contact .wrapper .mail span {
+  color: #111;
 }
 
 .contact .wrapper button {
@@ -27,6 +42,7 @@
   border-radius: 0 5px 5px 0;
   border: none;
   cursor: pointer;
+  height: 40px;
 }
 
 .contact .wrapper .icons {

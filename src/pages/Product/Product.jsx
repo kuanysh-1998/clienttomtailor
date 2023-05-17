@@ -7,6 +7,7 @@ import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartSlice";
+import { addToFavourites } from "../../redux/favouritesSlice";
 
 const Product = () => {
   const dispatch = useDispatch();
@@ -25,16 +26,12 @@ const Product = () => {
       <div className="left">
         <div className="images">
           <img
-            src={
-              data?.attributes?.img?.data?.attributes?.url
-            }
+            src={data?.attributes?.img?.data?.attributes?.url}
             alt=""
             onClick={(e) => setSelectedImg("img")}
           />
           <img
-            src={
-              data?.attributes?.img2?.data?.attributes?.url
-            }
+            src={data?.attributes?.img2?.data?.attributes?.url}
             alt=""
             onClick={(e) => setSelectedImg("img2")}
           />
@@ -83,7 +80,22 @@ const Product = () => {
           <AddShoppingCartIcon /> ДОБАВИТЬ В КОРЗИНУ
         </button>
         <div className="links">
-          <div className="item">
+          <div
+            className="item"
+            onClick={() =>
+              dispatch(
+                addToFavourites({
+                  id: data.id,
+                  title: data.attributes.title,
+                  description: data.attributes.description,
+                  price: data.attributes.price,
+                  img: data.attributes.img.data.attributes.url,
+                  img2: data.attributes.img2.data.attributes.url,
+                  quantity,
+                })
+              )
+            }
+          >
             <FavoriteBorderIcon /> ДОБАВИТЬ В ИЗБРАННОЕ
           </div>
 

@@ -6,11 +6,12 @@ import { Provider } from "react-redux";
 import { persistor, store } from "./redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 import { HashRouter } from "react-router-dom";
+import { app } from "./firebase.config";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <HashRouter>
-    <Provider store={store}>
+    <Provider store={store} app={app}>
       <PersistGate loading={"loading"} persistor={persistor}>
         <App />
       </PersistGate>

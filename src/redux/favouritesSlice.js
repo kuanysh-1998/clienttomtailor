@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  products: [],
+  favProducts: [],
 };
 
 const favouritesSlice = createSlice({
@@ -9,21 +9,21 @@ const favouritesSlice = createSlice({
   initialState,
   reducers: {
     addToFavourites: (state, action) => {
-      const item = state.products.find((item) => item.id === action.payload.id);
+      const item = state.favProducts.find((item) => item.id === action.payload.id);
 
       if (item) {
         item.quantity += action.payload.quantity;
       } else {
-        state.products.push(action.payload);
+        state.favProducts.push(action.payload);
       }
     },
     removeItem: (state, action) => {
-      state.products = state.products.filter(
+      state.favProducts= state.favProducts.filter(
         (item) => item.id !== action.payload
       );
     },
     resetFavourites: (state) => {
-      state.products = [];
+      state.favProducts = [];
     },
   },
 });

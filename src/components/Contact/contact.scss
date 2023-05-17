@@ -1,35 +1,50 @@
-.contact{
-    background-color: #2879fe;
-    color: white;
-    padding: 15px;
+.contact {
+  background-color: #2879fe;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+    width: 70%;
     display: flex;
-    justify-content: center;
-  
-    .wrapper{
-      width: 70%;
+    align-items: center;
+    justify-content: space-between;
+
+    .gmail {
+      display: flex;
+      cursor: pointer;
+    }
+    .mail {
+      background: #fff;
       display: flex;
       align-items: center;
-      justify-content: space-between;
-  
-      input{
-        padding: 10px;
-        border: none;
-        border-radius: 5px 0 0  5px;
-        outline: none;
+      padding: 5px;
+      border-radius: 5px 0 0  5px;
+      height: 40px;
+
+      img {
+        width: 40px;
       }
-  
-      button{
-        padding: 10px;
-        color: white;
-        background: #333;
-        border-radius: 0 5px 5px 0;
-        border: none;
-        cursor: pointer;
-      }
-  
-      .icons{
-        display: flex;
-        gap: 10px;
+
+      span {
+        color: #111;
       }
     }
+
+    button {
+      padding: 10px;
+      color: white;
+      background: #333;
+      border-radius: 0 5px 5px 0;
+      border: none;
+      cursor: pointer;
+      height: 40px;
+    }
+
+    .icons {
+      display: flex;
+      gap: 10px;
+    }
   }
+}

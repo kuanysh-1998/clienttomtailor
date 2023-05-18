@@ -10,17 +10,15 @@ import {
   GoogleAuthProvider,
   getAuth,
   signInWithPopup,
-  signOut,
 } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser } from "../../redux/cartSlice";
-import { useNavigate } from "react-router-dom";
 
-const Contact = () => {
+const Contact = ({scrollRef, location}) => {
   const dispatch = useDispatch();
+
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
-  const navigate = useNavigate();
   const handleGoogleLogin = (e) => {
     e.preventDefault();
 
@@ -37,15 +35,16 @@ const Contact = () => {
         );
 
         setTimeout(() => {
-          navigate("/");
+          window.scrollTo(0, 0);
         }, 1500);
       })
       .catch((error) => {
         console.log(error);
       });
   };
+
   return (
-    <div className="contact">
+    <div className="contact" ref={scrollRef}>
       <div className="wrapper">
         <span>БУДЬТЕ НА СВЯЗИ С НАМИ:</span>
         <div className="gmail" onClick={handleGoogleLogin}>

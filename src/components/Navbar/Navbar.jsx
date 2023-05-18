@@ -2,11 +2,11 @@ import React from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
-import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Cart from "../Cart/Cart";
 import { useSelector } from "react-redux";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const Navbar = () => {
   const [openCart, setOpenCart] = React.useState(false);
@@ -45,29 +45,25 @@ const Navbar = () => {
 
         <div className="navbar__right">
           <div className="item">
-            <Link className="link" to="/">
-              Главная страница
-            </Link>
-          </div>
-          <div className="item">
             <Link className="link" to="/about">
               О компании
             </Link>
           </div>
           <div className="item">
-            <Link className="link" to="/contact">
+            <Link
+              className="link"
+              to={{
+                pathname: "/",
+                hash: "#contact",
+              }}
+            >
               Связаться с нами
             </Link>
           </div>
-          <div className="item">
-            <Link className="link" to="/stores">
-              Магазины
-            </Link>
-          </div>
+
           <div className="icons">
             <SearchIcon />
-            <PersonOutlineOutlinedIcon />
-            <Link to="/favourites">
+            <Link to="/favourites" className="favourites">
               <FavoriteBorderOutlinedIcon />
               <span>{favProducts.length}</span>
             </Link>
@@ -75,6 +71,8 @@ const Navbar = () => {
               <ShoppingCartOutlinedIcon />
               <span>{products.length}</span>
             </div>
+
+            <MenuIcon className="hamburger" />
           </div>
         </div>
       </div>

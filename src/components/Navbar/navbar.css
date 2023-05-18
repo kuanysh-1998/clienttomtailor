@@ -1,5 +1,6 @@
 .navbar {
-  height: 80px;
+  height: 70px;
+  z-index: 99;
 }
 
 .navbar img {
@@ -12,6 +13,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.navbar .hamburger {
+  display: none;
 }
 
 .navbar .item {
@@ -42,10 +47,13 @@
   gap: 15px;
   color: #777;
   cursor: pointer;
+}
+
+.navbar__right .icons .favourites {
   position: relative;
 }
 
-.navbar__right .icons span {
+.navbar__right .icons .favourites span {
   font-size: 12px;
   width: 20px;
   height: 20px;
@@ -53,7 +61,7 @@
   background-color: #2879fe;
   color: white;
   position: absolute;
-  right: 30px;
+  right: -11px;
   top: -10px;
   display: flex;
   align-items: center;
@@ -77,4 +85,58 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar {
+    position: relative;
+  }
+  .navbar .hamburger {
+    display: initial;
+    color: black;
+    font-size: 35px;
+  }
+  .navbar .wrapper {
+    padding-top: 100px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    height: 99vh;
+  }
+  .navbar__left {
+    flex-direction: column;
+    gap: 10px;
+    top: 0;
+    left: -100%;
+    z-index: 99;
+    transition: all 0.4s ease;
+  }
+  .navbar__center {
+    flex-direction: column;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  .navbar__right {
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .navbar__right .icons {
+    gap: 20px;
+    color: #777;
+    cursor: pointer;
+    position: relative;
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    align-items: center;
+  }
+  .navbar .item {
+    font-size: 30px;
+    font-weight: 900;
+  }
 }

@@ -26,34 +26,28 @@
 }
 
 .navbar__left {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-.navbar__center {
   font-size: 30px;
   letter-spacing: 2px;
 }
 
-.navbar__right {
+.navbar__center {
   display: flex;
   align-items: center;
   gap: 25px;
 }
 
-.navbar__right .icons {
+.navbar__right {
   display: flex;
   gap: 15px;
   color: #777;
   cursor: pointer;
 }
 
-.navbar__right .icons .favourites {
+.navbar__right .favourites {
   position: relative;
 }
 
-.navbar__right .icons .favourites span {
+.navbar__right .favourites span {
   font-size: 12px;
   width: 20px;
   height: 20px;
@@ -68,11 +62,11 @@
   justify-content: center;
 }
 
-.navbar__right .icons .cartIcon {
+.navbar__right .cartIcon {
   position: relative;
 }
 
-.navbar__right .icons .cartIcon span {
+.navbar__right .cartIcon span {
   font-size: 12px;
   width: 20px;
   height: 20px;
@@ -97,7 +91,23 @@
     font-size: 35px;
   }
   .navbar .wrapper {
-    padding-top: 100px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar__left {
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+  .navbar__right {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    margin-top: 15px;
+    margin-right: 20px;
+  }
+  .navbar__center {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -105,35 +115,15 @@
     gap: 10px;
     background: rgba(255, 255, 255, 0.7);
     height: 99vh;
-  }
-  .navbar__left {
-    flex-direction: column;
-    gap: 10px;
+    position: absolute;
     top: 0;
     left: -100%;
-    z-index: 99;
+    gap: 10px;
+    z-index: -3;
     transition: all 0.4s ease;
   }
-  .navbar__center {
-    flex-direction: column;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-  }
-  .navbar__right {
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-  }
-  .navbar__right .icons {
-    gap: 20px;
-    color: #777;
-    cursor: pointer;
-    position: relative;
-    position: absolute;
-    top: 18px;
-    right: 10px;
-    align-items: center;
+  .navbar__center.active {
+    left: 0;
   }
   .navbar .item {
     font-size: 30px;

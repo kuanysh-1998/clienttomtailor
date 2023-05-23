@@ -22,24 +22,19 @@
   }
 
   &__left {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-  }
-  &__center {
     font-size: 30px;
     letter-spacing: 2px;
   }
-  &__right {
+  &__center {
     display: flex;
     align-items: center;
     gap: 25px;
-
-    .icons {
-      display: flex;
-      gap: 15px;
-      color: #777;
-      cursor: pointer;
+  }
+  &__right {
+    display: flex;
+    gap: 15px;
+    color: #777;
+    cursor: pointer;
 
       .favourites {
         position: relative;
@@ -79,7 +74,7 @@
       }
     }
   }
-}
+
 
 @media screen and (max-width: 1024px) {
   .navbar {
@@ -90,7 +85,25 @@
       font-size: 35px;
     }
     .wrapper {
-      padding-top: 100px;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+
+    }
+    &__left {
+      margin-left: 20px;
+      margin-top: 15px;
+    }
+    &__right {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      margin-top: 15px;
+      margin-right: 20px;
+    }
+    &__center {
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -98,41 +111,16 @@
       gap: 10px;
       background: rgba(255, 255, 255, 0.7);
       height: 99vh;
-
-        }
-
-    &__left {
-      flex-direction: column;
-      gap: 10px;
+      position: absolute;
       top: 0;
       left: -100%;
-      z-index: 99;
-      transition: all 0.4s ease;
-
-    }
-    &__center {
-      flex-direction: column;
-      position: absolute;
-      top: 10px;
-      left: 10px;
-    }
-    &__right {
-      flex-direction: column;
-      justify-content: center;
       gap: 10px;
-
-      .icons {
-        gap: 20px;
-        color: #777;
-        cursor: pointer;
-        position: relative;
-        position: absolute;
-        top: 18px;
-        right: 10px;
-        align-items: center;
+      z-index: -3;
+      transition: all 0.4s ease;
+      &.active {
+        left: 0;
       }
     }
-
     .item {
       font-size: 30px;
       font-weight: 900;

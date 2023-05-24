@@ -12,6 +12,7 @@ import {
 import storage from "redux-persist/lib/storage";
 import cartSlice from "./cartSlice";
 import favouritesSlice from "./favouritesSlice";
+import modalSlice from "./modalSlice";
 
 const persistConfig = {
   key: "root",
@@ -22,6 +23,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   cartSlice,
   favouritesSlice,
+  modalSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

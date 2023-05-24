@@ -6,11 +6,14 @@ import Slider from "../../components/Slider/Slider";
 import Categories from "../../components/Categories/Categories";
 import Contact from "../../components/Contact/Contact";
 import { useLocation } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { setActive } from "../../redux/modalSlice";
 
 const Home = () => {
+  const dispatch = useDispatch();
+  const { active } = useSelector((state) => state.modalSlice);
   const scrollRef = React.useRef(null);
   const location = useLocation();
-
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

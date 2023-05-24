@@ -5,11 +5,13 @@ import SearchIcon from "@mui/icons-material/Search";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Cart from "../Cart/Cart";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
+import { setActive } from "../../redux/modalSlice";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
   const [openCart, setOpenCart] = React.useState(false);
   const [showMenu, setShowMenu] = React.useState(false);
   const { products } = useSelector((state) => state.cartSlice);
@@ -62,7 +64,7 @@ const Navbar = () => {
         </div>
 
         <div className="navbar__right">
-          <SearchIcon />
+          <SearchIcon onClick={() => dispatch(setActive(true))} />
           <Link to="/favourites" className="favourites">
             <FavoriteBorderOutlinedIcon />
             <span>{favProducts.length}</span>

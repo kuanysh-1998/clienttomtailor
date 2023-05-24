@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/clienttomtailor/static/css/main.7006d761.css",
-    "main.js": "/clienttomtailor/static/js/main.472026d2.js",
+    "main.css": "/clienttomtailor/static/css/main.f85d26c7.css",
+    "main.js": "/clienttomtailor/static/js/main.0c3ea83b.js",
+    "static/media/logoG.jpg": "/clienttomtailor/static/media/logoG.8a632e8306a1a45e17a9.jpg",
     "index.html": "/clienttomtailor/index.html",
-    "main.7006d761.css.map": "/clienttomtailor/static/css/main.7006d761.css.map",
-    "main.472026d2.js.map": "/clienttomtailor/static/js/main.472026d2.js.map"
+    "main.f85d26c7.css.map": "/clienttomtailor/static/css/main.f85d26c7.css.map",
+    "main.0c3ea83b.js.map": "/clienttomtailor/static/js/main.0c3ea83b.js.map"
   },
   "entrypoints": [
-    "static/css/main.7006d761.css",
-    "static/js/main.472026d2.js"
+    "static/css/main.f85d26c7.css",
+    "static/js/main.0c3ea83b.js"
   ]
 }
